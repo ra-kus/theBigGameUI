@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col">
+      <div class="row arenaRow">
+        <div class="col">
+          <div class="firstPlayerArena fence">
+            <i class="far fa-hand-rock fa-10x" *ngIf="selectedFigure==figures.get('fig_01')"></i>
+            <i class="far fa-hand-paper fa-10x" *ngIf="selectedFigure==figures.get('fig_02')"></i>
+            <i class="far fa-hand-scissors fa-10x" *ngIf="selectedFigure==figures.get('fig_03')"></i>
+            <i class="far fa-hand-lizard fa-10x" *ngIf="selectedFigure==figures.get('fig_04')"></i>
+            <i class="far fa-hand-spock fa-10x" *ngIf="selectedFigure==figures.get('fig_05')"></i>
+          </div>
+        </div>
+        <div class="col">
+          <div class="secondPlayerArena fence">
+            <i class="far fa-hand-rock fa-10x" *ngIf="oponentFigure==figures.get('fig_01')"></i>
+            <i class="far fa-hand-paper fa-10x" *ngIf="oponentFigure==figures.get('fig_02')"></i>
+            <i class="far fa-hand-scissors fa-10x" *ngIf="oponentFigure==figures.get('fig_03')"></i>
+            <i class="far fa-hand-lizard fa-10x" *ngIf="oponentFigure==figures.get('fig_04')"></i>
+            <i class="far fa-hand-spock fa-10x" *ngIf="oponentFigure==figures.get('fig_05')"></i>
+          </div>
+        </div>
+      </div>
+      <div class="row infoRow">
+        <div class="col">
+          <div class="infoPlace fence">
+            <h3>{{verdictMsg}}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row figureRow">
+        <div class="col">
+          <div class="fugurePlace fence">
+            <a class="btn" (click)="onFigureHit(figures.get('fig_01'))">
+              <i class="far fa-hand-rock fa-4x"></i>
+            </a>
+            <a class="btn" (click)="onFigureHit(figures.get('fig_02'))">
+              <i class="far fa-hand-paper fa-4x"></i>
+            </a>
+            <a class="btn" (click)="onFigureHit(figures.get('fig_03'))">
+              <i class="far fa-hand-scissors fa-4x"></i>
+            </a>
+            <a class="btn" (click)="onFigureHit(figures.get('fig_04'))">
+              <i class="far fa-hand-lizard fa-4x"></i>
+            </a>
+            <a class="btn" (click)="onFigureHit(figures.get('fig_05'))">
+              <i class="far fa-hand-spock fa-4x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row buttonRow">
+        <div class="col">
+          <div class="buttonPlace">
+            <button class="btn btn-lg btn-success btn-block" type="button" (click)="onStartContest()">Start</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-2">
+      <div class="row">
+        <div class="col">
+          <div class="playersInfo fence">
+            <ul>
+              <li *ngFor="let user of allUsers">
+                <i class="fas fa-circle"></i>
+                <span>{{user}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-lg btn-danger btn-block" type="button" (click)="onResetContest()">Reset</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

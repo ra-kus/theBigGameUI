@@ -1,0 +1,8 @@
+<div class="container">
+  <form class="form-signin">
+    <h2 class="form-signin-heading">Insert nickname</h2>
+    <label for="inputName" class="sr-only">Nickname</label>
+    <input type="name" id="inputName" name="inputName" class="form-control" placeholder="nickname" required="" autofocus="" [(ngModel)]="nickname">
+    <button class="btn btn-lg btn-primary btn-block" type="button" (click)="onGetIn()" [disabled]="!nickname">Get in</button>
+  </form>
+</div>

@@ -1,0 +1,55 @@
+.fence {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.container {
+    margin-top: 30px;
+}
+.firstPlayerArena {
+    height: 250px;
+    text-align: center;
+}
+
+.secondPlayerArena {
+    height: 250px;
+    text-align: center;
+}
+.infoPlace {
+    height: 100px;
+    text-align: center;
+}
+.fugurePlace {
+    height: 100px;
+    text-align: center;
+}
+a {
+    margin: 0 10px 0 10px;
+}
+h3 {
+    color: darkred;
+    font-weight: bold;
+    margin-top: 25px;
+}
+ul {
+    list-style-type: none;
+    padding: 10px 0 0 10px;
+}
+.fugurePlace i {
+    margin-top: 10px;
+}
+.fugurePlace i:hover {
+    color: blueviolet;
+}
+.arenaRow i {
+    margin-top: 35px;
+}
+.buttonPlace {
+    height: 60px
+}
+.playersInfo {
+    height: 480px;
+}
+.playersInfo span {
+    margin-left: 10px;
+}
